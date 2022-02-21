@@ -13,7 +13,6 @@ public class SimpleMailSession {
 	String from, to, password, subject, message;
 
 	public SimpleMailSession(String host, final String from, final String password, final String to) {
-
 		Properties properties = new Properties();
 
 		properties.put("mail.smtp.host", host);
@@ -34,11 +33,9 @@ public class SimpleMailSession {
 		this.from = from;
 		this.to = to;
 		this.password = password;
-
 	}
 
 	public SimpleMailSession(String host, final String from, final String password, final String to, boolean debug) {
-
 		Properties properties = new Properties();
 
 		properties.put("mail.smtp.host", host);
@@ -62,11 +59,9 @@ public class SimpleMailSession {
 		this.from = from;
 		this.to = to;
 		this.password = password;
-
 	}
 
 	public SimpleMailSession(String host, final String from, final String to) {
-
 		Properties properties = new Properties();
 
 		properties.put("mail.smtp.host", host);
@@ -78,11 +73,9 @@ public class SimpleMailSession {
 
 		this.from = from;
 		this.to = to;
-
 	}
 
 	public SimpleMailSession(String host, final String from, final String to, boolean debug) {
-
 		Properties properties = new Properties();
 
 		properties.put("mail.smtp.host", host);
@@ -97,7 +90,6 @@ public class SimpleMailSession {
 
 		this.from = from;
 		this.to = to;
-
 	}
 
 	public void setMessage(String message) {
@@ -117,35 +109,25 @@ public class SimpleMailSession {
 	}
 
 	public void send(String message, String subject) throws MessagingException {
-
 		MimeMessage email = new MimeMessage(session);
 
 		email.setFrom(new InternetAddress(from));
-
 		email.setRecipients(Message.RecipientType.TO, to);
-
 		email.setSubject(subject);
-
 		email.setText(message);
 
 		Transport.send(email);
-
 	}
 
 	public void send() throws MessagingException {
-
 		MimeMessage email = new MimeMessage(session);
 
 		email.setFrom(new InternetAddress(from));
-
 		email.setRecipients(Message.RecipientType.TO, to);
-
 		email.setSubject(subject);
-
 		email.setText(message);
 
 		Transport.send(email);
-
 	}
 
 }
