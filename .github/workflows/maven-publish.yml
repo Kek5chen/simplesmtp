@@ -31,7 +31,7 @@ jobs:
       id: getxml
       uses: mavrosxristoforos/get-xml-info@1.0
       with:
-        xml-file: 'a-file-here.xml'
+        xml-file: 'pom.xml'
         xpath: '//version'
 
     - name: Publish to GitHub Releases
