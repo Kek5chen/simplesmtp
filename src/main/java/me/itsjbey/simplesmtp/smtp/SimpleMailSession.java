@@ -8,7 +8,7 @@ import java.util.Properties;
 
 public class SimpleMailSession {
 
-	private Session session;
+	private final Session session;
 
 	String from, to, password, subject, message;
 
