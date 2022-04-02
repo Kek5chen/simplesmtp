@@ -29,7 +29,7 @@ jobs:
 
     - name: Get XML
       id: getxml
-      uses: mavrosxristoforos/get-xml-info@1.0
+      uses: mavrosxristoforos/get-xml-info@1.1.0
       with:
         xml-file: 'pom.xml'
         xpath: "//*[local-name()='project']/*[local-name()='version']/text()"
