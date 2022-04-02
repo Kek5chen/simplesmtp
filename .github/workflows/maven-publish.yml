@@ -32,7 +32,7 @@ jobs:
       uses: mavrosxristoforos/get-xml-info@1.1.0
       with:
         xml-file: 'pom.xml'
-        xpath: "//*[local-name()='project']/*[local-name()='version']/text()"
+        xpath: "//*[local-name()='project']/*[local-name()='version']"
 
     - name: Publish to GitHub Releases
       uses: actions/create-release@v1
