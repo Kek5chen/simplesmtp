@@ -32,7 +32,7 @@ jobs:
       uses: mavrosxristoforos/get-xml-info@1.0
       with:
         xml-file: 'pom.xml'
-        xpath: '//version'
+        xpath: '//project/version'
 
     - name: Publish to GitHub Releases
       uses: actions/create-release@v1
